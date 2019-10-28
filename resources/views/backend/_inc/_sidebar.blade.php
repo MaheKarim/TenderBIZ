@@ -17,11 +17,12 @@
 					</div>
 					<ul class="nav nav-primary">
 						<li class="nav-item active">
-						<a data-toggle="collapse" href="{{ url('/') }}" class="collapsed" aria-expanded="false">
-								<i class="fas fa-home"></i>
-								<p>Dashboard</p>
+							<a  href="{{ url('/home')}}" class="collapsed" aria-expanded="false">
+									<i class="fas fa-home"></i>
+									<p>Dashboard</p>	
 							</a>
-						</li>
+							</li>
+					
 						<li class="nav-section">
 							<span class="sidebar-mini-icon">
 								<i class="fa fa-ellipsis-h"></i>

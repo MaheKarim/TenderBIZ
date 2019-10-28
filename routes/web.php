@@ -20,4 +20,9 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
+// Logout Option
+Route::get('logout','\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
 
+
+Route::get('/changePassword','HomeController@showChangePasswordForm')->name('changePasswordShow');
+Route::post('/changePassword','HomeController@changePassword')->name('changePassword');
