@@ -26,3 +26,5 @@ Route::get('logout','\App\Http\Controllers\Auth\LoginController@logout')->name('
 
 Route::get('/changePassword','HomeController@showChangePasswordForm')->name('changePasswordShow');
 Route::post('/changePassword','HomeController@changePassword')->name('changePassword');
+
+Route::get('/show/category','CategoryController@show')->name('showCategory');

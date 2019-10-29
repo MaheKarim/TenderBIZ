@@ -8,7 +8,7 @@
 						<div class="info">
 							<a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
 								<span>
-									Hizrian III
+									{{ Auth::user()->name }}
 									<span class="user-level">Administrator</span>
 								</span>
 							</a>
@@ -30,9 +30,9 @@
 							<h4 class="text-section">Components</h4>
 						</li>
 						<li class="nav-item">
-							<a href="widgets.html">
+							<a href="{{ route('showCategory') }}">
 								<i class="fas fa-desktop"></i>
-								<p>Widgets</p>
+								<p>Category</p>
 							</a>
 						</li>
 					</ul>
