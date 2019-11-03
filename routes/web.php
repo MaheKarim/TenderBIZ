@@ -28,3 +28,5 @@ Route::get('/changePassword','HomeController@showChangePasswordForm')->name('cha
 Route::post('/changePassword','HomeController@changePassword')->name('changePassword');
 
 Route::get('/show/category','CategoryController@show')->name('showCategory');
+Route::get('/add/category','CategoryController@add')->name('addCategory');
+Route::post('/store-category','CategoryController@store')->name('storeCategory');
