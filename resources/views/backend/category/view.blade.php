@@ -41,23 +41,23 @@
                                 </tr>
                             </thead>
                             <tbody>
-                               {{-- @foreach ($categories as $category)  --}}
+                               @foreach ($categories as $category) 
                                 <tr>
-                                <td>DD</td>
-                                <td>WWW</td>
-                                <td>SSS</td>
+                                <td>{{ $category->category_name }}</td>
+                                <td>{{ $category->updated_at }}</td>
+                                <td>{{ $category->created_at }}</td>
                                     <td>
                                         <div class="form-button-action">
-                                        {{-- <a href="{{ route('editCategory', $category->id) }}" type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
+                                        <a href="{{ route('editCategory', $category->id) }}" type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
                                                 <i class="fa fa-edit"></i>
                                             </a>
-                                            <a href="{{ route('deleteCategory', $category->id) }}" type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
+                                             <a href="{{ route('deleteCategory', $category->id) }}" type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
                                                 <i class="fa fa-times"></i>
-                                            </a> --}}
+                                            </a> 
                                         </div>
                                     </td>
                                 </tr>
-                                 {{-- @endforeach --}}
+                                 @endforeach
                             </tbody>
                         </table>
                     </div>

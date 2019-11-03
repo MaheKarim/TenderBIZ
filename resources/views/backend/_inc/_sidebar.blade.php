@@ -31,7 +31,7 @@
 						</li>
 						<li class="nav-item">
 							<a href="{{ route('showCategory') }}">
-								<i class="fas fa-desktop"></i>
+								<i class="fas fa-list-alt"></i>
 								<p>Category</p>
 							</a>
 						</li>

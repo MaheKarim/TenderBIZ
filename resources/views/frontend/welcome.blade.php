@@ -53,7 +53,7 @@
                         <a class="nav-link" href="#get_touch">Contact</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link nav-fixed color-rem" href="#">Sign-up </a>
+                        <a class="nav-link nav-fixed color-rem" href="{{ route('login') }}">Sign-up </a>
                     </li>
 
                 </ul>
@@ -79,13 +79,13 @@
                                 </p>
                                 <div class="slider-btn">
 
-                                    <a href="#" class="buyer-bg">
+                                    <a href="{{ route('login') }}" class="buyer-bg">
                                         <div class="buyer-btn">
                                             <i class="fab fa-buysellads"></i>
                                             <p>Sign-in as a<span>Buyer</span></p>
                                         </div>
                                     </a>
-                                    <a href="#" class="seller-bg">
+                                    <a href="{{ url('login') }}" class="seller-bg">
                                         <div class="seller-btn">
                                             <i class="fab fa-sellcast"></i>
                                             <p>Sign-in as a<span>Seller</span></p>
