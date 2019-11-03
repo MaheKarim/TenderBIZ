@@ -29,4 +29,4 @@ Route::post('/changePassword','HomeController@changePassword')->name('changePass
 
 Route::get('/show/category','CategoryController@show')->name('showCategory');
 Route::get('/add/category','CategoryController@add')->name('addCategory');
-Route::post('/store-category','CategoryController@store')->name('storeCategory');
+Route::post('store-category','CategoryController@store')->name('storeCategory');

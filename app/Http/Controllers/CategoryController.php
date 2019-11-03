@@ -18,10 +18,11 @@ class CategoryController extends Controller
     }
     
     public function store(Request $request){
+
         $categories = new Category();
-        $categories->categoy_name = $request->category_name;
+        $categories->category_name = $request->category_name;
         $categories->save();
 
-        return \redirect(route('showCategory'));
+        return redirect(route('showCategory'));
     }
 }

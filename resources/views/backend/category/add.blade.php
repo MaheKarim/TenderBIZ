@@ -52,10 +52,10 @@
                         <div class="alert alert-success">
                             {{ session()->get('success') }}
                         </div>
-                           @endif
+                        @endif
                         <!-- Notification End Here -->
                     <form action="{{ url('store-category') }}" method="POST">
-                             @csrf
+                        @csrf
                             <div class="form-group">
                                 <label for="text">Add Category Name</label>
                                 <input type="text" class="form-control" name="category_name" id="text" placeholder="Enter Category Name">
