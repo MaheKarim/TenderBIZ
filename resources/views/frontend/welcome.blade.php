@@ -335,7 +335,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-title text-center">
-                        <h3>live tender</h3>
+                        <h3>Live Tender</h3>
                         <img src="{{ asset('/') }}frontend/images/shape.png" alt="">
                     </div>
                 </div>
@@ -365,20 +365,7 @@
     </section>
     <!-- end of Live Tender -->
     
-     <!-- start of  see video -->
-    <section id="see_video">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <a href="https://www.youtube.com/watch?v=g-_SuiCxZsg" class="video-icon" data-autoplay="true" data-vbtype="video">
-                        <i class="fas fa-play"></i>
-                    </a>
-
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- end of  see video -->
+   
 
     <!-- start of price plan -->
     <section id="full_price">
@@ -501,7 +488,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-title text-center">
-                        <h3>Awesome Team</h3>
+                        <h3>Team Member</h3>
                         <img src="{{ asset('/') }}frontend/images/shape.png" alt="">
                     </div>
                 </div>
@@ -583,10 +570,10 @@
                             </div>
                         </div>
                         <div class="team-txt text-center py-2">
-                            <h2>sujon saha</h2>
+                            <h2>NAIMUL HASAN</h2>
                             <h3>developer</h3>
                             <p>
-                                sujon saha is Hardworking rson. He never ummy text of the prining and typesetting industry.
+                                Nuhash Naimul is Hardworking rson. He never ummy text of the prining and typesetting industry.
                             </p>
                         </div>
                     </div>
@@ -627,7 +614,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-half"></i>
                         </div>
-                        <h3>Partha Paul</h3>
+                        <h3>Salam Bhuiyan</h3>
                         <h4>user</h4>
                     </div>
                     <div class="fd-txt bg-light text-center py-5">
@@ -655,7 +642,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-half"></i>
                         </div>
-                        <h3>Sujon Saha</h3>
+                        <h3>Razzak Ahmed</h3>
                         <h4>user</h4>
                     </div>
                     <div class="fd-txt bg-light text-center py-5">

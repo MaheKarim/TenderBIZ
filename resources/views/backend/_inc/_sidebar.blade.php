@@ -8,7 +8,7 @@
 						<div class="info">
 							<a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
 								<span>
-									{{ Auth::user()->name }}
+									Admin
 									<span class="user-level">Administrator</span>
 								</span>
 							</a>
