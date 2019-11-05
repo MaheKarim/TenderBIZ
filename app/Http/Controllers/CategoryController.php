@@ -29,9 +29,9 @@ class CategoryController extends Controller
     }
 
     
-    public function edit($categoryId){
+    public function edit($id){
         $data = [ ];
-        $data['categories'] = Category::find($categoryId);
+        $data['categories'] = Category::find($id);
 
         return view('backend.category.edit', $data);
     }
