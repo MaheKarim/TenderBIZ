@@ -23,52 +23,51 @@
                     </div>
                 </div>
                 <div class="card-body">
-                <!-- Modal -->
-
-                 <!-- Notification Start -->
-                 @if (session()->has('success'))
-                 <div class="alert alert-success">
-                     {{ session()->get('success') }}
-                 </div>
-                 @endif
-                 <!-- Notification End -->
-                    
+                                   <!-- Modal -->                    
                                    <!-- Notification Start Here -->
                                    @if (session()->has('success'))
                                    <div class="alert alert-success">
                                        {{ session()->get('success') }}
                                    </div>
-                                      @endif
+                                   @endif
                                    <!-- Notification End Here -->
 
                      <div class="table-responsive">
                         <table id="add-row" class="display table table-striped table-hover" >
                             <thead>
                                 <tr>
-                                    <th>Service Name</th>
+                                    <th>Tender Title</th>
+                                    <th>Tender Description</th>
+                                    <th>Tender Quantity</th>
+                                    <th>Tender Price</th>
+                                    <th>Tender Area</th>
                                     <th>Created At</th>
-                                    <th>Updated At</th>
+                                   
                                     <th style="width: 10%">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                               {{-- @foreach ($categories as $category)  --}}
+                               @foreach ($services as $service) 
                                 <tr>
-                                <td>DDD</td>
-                                <td>DDD</td>
-                                <td>DDD</td>
+                                <td>{{ $service->service_tender_name }}</td>
+                                <td>{!! str_limit($service->service_tender_description , 50) !!}</td>
+                                <td>{{ $service->service_tender_quantity }}</td>
+                                <td>{{ $service->service_tender_any_price }}</td>
+                                <td><img style="width:100%;max-width:100px" src="{{ asset('storage') }}/{{ $service->service_image }}"/></td>
+                                <td>{{ $service->service_tender_area }}</td>
+                                
                                     <td>
                                         <div class="form-button-action">
                                         {{-- <a href="{{ route('editCategory', $category->id) }}" type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
                                                 <i class="fa fa-edit"></i>
-                                            </a>
-                                            <a href="{{ route('deleteCategory', $category->id) }}" type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
+                                            </a>  --}}
+                                        <a href="{{ route('deleteTender', $service->id) }}" type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
                                                 <i class="fa fa-times"></i>
-                                            </a> --}}
+                                        </a> 
                                         </div>
                                     </td>
                                 </tr>
-                                 {{-- @endforeach --}}
+                                 @endforeach
                             </tbody>
                         </table>
                     </div>

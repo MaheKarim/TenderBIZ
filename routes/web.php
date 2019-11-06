@@ -31,5 +31,6 @@ Route::get('delete/category/{id}','CategoryController@delete')->name('deleteCate
 Route::get('/show/tender','ServiceController@show')->name('showTender');
 Route::get('/add/tender','ServiceController@add')->name('addTender');
 Route::post('store-tender','ServiceController@store')->name('storeTender');
+Route::get('/delete/tender/{id}','ServiceController@delete')->name('deleteTender');
 
 Route::get('/check','HomeController@indexa');

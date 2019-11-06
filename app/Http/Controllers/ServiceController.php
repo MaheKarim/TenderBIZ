@@ -2,17 +2,24 @@
 
 namespace App\Http\Controllers;
 
+
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
+use Illuminate\Http\File;
 use Illuminate\Http\Request;
-// use Illuminate\Support\Facades\Storage;
+
 // use Illuminate\Support\Str;
 use App\Service;
 
 class ServiceController extends Controller
 {
-    // show page
+    // show page  
     public function show(){
 
-        return view ('backend.service.show');
+        $data = [' '];
+        $data['services'] = Service::all();
+
+        return view ('backend.service.show', $data);
     }
 
     public function add(){
@@ -39,5 +46,16 @@ class ServiceController extends Controller
 
         session()->flash('success', 'Service Create Successfully!');
         return \redirect(route('showTender'));
+    }
+
+
+    public function delete($id){
+
+        $services = Service::find($id);
+        Storage::delete($services->service_image); 
+        $services->delete();
+
+        \session()->flash('success','Tender Delete Successfully');
+        return redirect(route('showTender'));
     }
 }
