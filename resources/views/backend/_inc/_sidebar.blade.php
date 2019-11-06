@@ -35,6 +35,12 @@
 								<p>Category</p>
 							</a>
 						</li>
+						<li class="nav-item">
+							<a href="{{ route('showTender') }}">
+								<i class="fas fas fa-atom"></i>
+								<p>Service Tender</p>
+							</a>
+						</li>
 					</ul>
 				</div>
 			</div>

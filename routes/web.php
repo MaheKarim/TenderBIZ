@@ -27,4 +27,9 @@ Route::post('/update-category','CategoryController@update')->name('updateCategor
 Route::get('delete/category/{id}','CategoryController@delete')->name('deleteCategory');
 
 
+
+Route::get('/show/tender','ServiceController@show')->name('showTender');
+Route::get('/add/tender','ServiceController@add')->name('addTender');
+Route::post('store-tender','ServiceController@store')->name('storeTender');
+
 Route::get('/check','HomeController@indexa');

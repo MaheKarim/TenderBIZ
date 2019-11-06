@@ -31,18 +31,20 @@
 	<div class="wrapper">
 		@include('backend._inc._navbar')
 			<!-- End Navbar -->
-		</div>
+	</div>
 
 		<!-- Sidebar -->
 		@include('backend._inc._sidebar')
 		<!-- End Sidebar -->
 
 		<div class="main-panel">
-			@yield('content')
+			<div class="content">
+		@yield('content')
+		
+			</div>
 			@include('backend._inc.footer')
 		</div>
-
-
+		
 	</div>
 	@include('backend._inc.scriptfile')
 </body>
