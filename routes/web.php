@@ -1,15 +1,6 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+
 
 Route::get('/', function () {
     return view('frontend.welcome');
@@ -31,7 +22,7 @@ Route::post('/changePassword','HomeController@changePassword')->name('changePass
 Route::get('/show/category','CategoryController@show')->name('showCategory');
 Route::get('/add/category','CategoryController@add')->name('addCategory');
 Route::post('store-category','CategoryController@store')->name('storeCategory');
-Route::get('/category/edit/{category}','CategoryController@edit')->name('editCategory');
+Route::get('/category/edit/{id}','CategoryController@edit')->name('editCategory');
 Route::post('/update-category','CategoryController@update')->name('updateCategory');
 Route::get('delete/category/{id}','CategoryController@delete')->name('deleteCategory');
 
