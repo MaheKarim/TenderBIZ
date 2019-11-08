@@ -38,7 +38,7 @@
                                 <tr>
                                     <th>Tender Title</th>
                                     <th>Tender Description</th>
-                                    <th>Tender Quantity</th>
+                                    {{-- <th>Tender Quantity</th> --}}
                                     <th>Tender Price</th>
                                     <th>Tender Area</th>
                                     <th>Created At</th>
@@ -50,8 +50,10 @@
                                @foreach ($services as $service) 
                                 <tr>
                                 <td>{{ $service->service_tender_name }}</td>
+
                                 <td>{!! str_limit($service->service_tender_description , 50) !!}</td>
-                                <td>{{ $service->service_tender_quantity }}</td>
+
+                                {{-- <td>{{ $service->service_tender_quantity }}</td> --}}
                                 <td>{{ $service->service_tender_any_price }}</td>
                                 <td><img style="width:100%;max-width:100px" src="{{ asset('storage') }}/{{ $service->service_image }}"/></td>
                                 <td>{{ $service->service_tender_area }}</td>

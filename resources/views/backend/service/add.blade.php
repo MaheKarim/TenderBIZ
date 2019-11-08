@@ -84,10 +84,6 @@
                                 <input type="text" class="form-control" name="service_tender_any_price" id="text" placeholder="Enter Tender Price">
                                 <label for="text"> Tender Area</label>
                                 <input type="text" class="form-control" name="service_tender_area" id="text" placeholder="Enter Tender Area">
-                                
-                                
-                                
-                                
                                 <label for="text">Choose Product Image</label>
                                 <input type="file" class="form-control" name="service_image">
                             </div>

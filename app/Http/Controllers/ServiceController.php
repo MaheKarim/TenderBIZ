@@ -30,16 +30,19 @@ class ServiceController extends Controller
     public function store(Request $request){
 
         $image = '';
+
         if($request->has('service_image')){
             $image = $request->file('service_image')->store('service_images');
          }
 
         $services                              = new Service();
         $services->service_tender_name         = $request->service_tender_name;
-        $services->service_tender_description   = $request->service_tender_description;
+        $services->service_tender_description  = $request->service_tender_description;
         $services->service_tender_quantity     = $request->service_tender_quantity;
         $services->service_tender_any_price    = $request->service_tender_any_price;
+
         $services->service_image               = $image;
+
         $services->service_tender_area         = $request->service_tender_area;
         $services->save();
 

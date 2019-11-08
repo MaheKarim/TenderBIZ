@@ -19,8 +19,10 @@ class CreateServicesTable extends Migration
             $table->longText('service_tender_description')->nullable();
             $table->string('service_tender_quantity');
             $table->string('service_tender_any_price')->nullable();
+            // Here for Image
             $table->string('service_image')->nullable();
             $table->string('service_tender_area')->nullable();
+            // Kaj Kori nai
             $table->string('category_name_id')->nullable();
             $table->timestamps();
         });
