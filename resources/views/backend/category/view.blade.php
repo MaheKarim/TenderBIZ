@@ -46,6 +46,7 @@
                                 <td>{{ $category->category_name }}</td>
                                 <td>{{ $category->updated_at }}</td>
                                 <td>{{ $category->created_at }}</td>
+                                @if( $category->id != 1)
                                     <td>
                                         <div class="form-button-action">
                                         {{-- <a href="{{ route('editCategory', $category->id) }}" type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
@@ -56,6 +57,7 @@
                                             </a> 
                                         </div>
                                     </td>
+                                @endif
                                 </tr>
                                  @endforeach
                             </tbody>

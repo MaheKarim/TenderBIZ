@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Category;
+use App\Service; 
 
 class CategoryController extends Controller
 {
@@ -52,6 +53,17 @@ class CategoryController extends Controller
 
 
     public function delete($id){
+
+        if($id == 1){
+            session()->flash('success','Category Deleted != Successfully');
+            return redirect(route('showCategory')); 
+        }
+        $services = Service::where('category_name_id', $id)->get();
+        foreach ($services as $service) {
+            Service::find($service->id)->update([
+                'category_name_id' => 1
+            ]);
+        }
 
         $categories = Category::find($id);
         $categories->delete();
