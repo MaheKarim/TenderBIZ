@@ -10,7 +10,7 @@ class Service extends Model
     protected $guarded = [' '];
 
     public function Category(){
-        return $this->belongsTo('App\Category');
+        return $this->belongsTo('App\Category','category_name_id', 'id');
     }
     
 }
