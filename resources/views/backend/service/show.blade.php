@@ -36,6 +36,7 @@
                         <table id="add-row" class="display table table-striped table-hover" >
                             <thead>
                                 <tr>
+                                    <th>Tender Category</th>
                                     <th>Tender Title</th>
                                     <th>Tender Description</th>
                                     {{-- <th>Tender Quantity</th> --}}
@@ -49,6 +50,7 @@
                             <tbody>
                                @foreach ($services as $service) 
                                 <tr>
+                                <td>{{ $service->Category->category_name }}</td>
                                 <td>{{ $service->service_tender_name }}</td>
 
                                 <td>{!! str_limit($service->service_tender_description , 50) !!}</td>

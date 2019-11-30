@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Illuminate\Http\File;
 use Illuminate\Http\Request;
-
+use Auth;
 // use Illuminate\Support\Str;
 use App\Service;
 
@@ -40,10 +40,10 @@ class ServiceController extends Controller
         $services->service_tender_description  = $request->service_tender_description;
         $services->service_tender_quantity     = $request->service_tender_quantity;
         $services->service_tender_any_price    = $request->service_tender_any_price;
-
         $services->service_image               = $image;
-
         $services->service_tender_area         = $request->service_tender_area;
+        $services->category_name_id            = $request->category_name_id;
+        $services->user_id = Auth::id();
         $services->save();
 
 

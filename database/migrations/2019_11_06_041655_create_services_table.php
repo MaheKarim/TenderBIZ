@@ -24,6 +24,7 @@ class CreateServicesTable extends Migration
             $table->string('service_tender_area')->nullable();
             // Kaj Kori nai
             $table->string('category_name_id')->nullable();
+            $table->integer('user_id');
             $table->timestamps();
         });
     }
