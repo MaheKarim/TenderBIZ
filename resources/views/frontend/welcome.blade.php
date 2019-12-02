@@ -388,14 +388,15 @@
                             <div class="plan">
                                 <div class="plan-month">
                                     <h4><span>0</span>.00</h4>
-                                    <p>Per Month</p>
+                                    <p>Bdt.</p>
+                                    
                                 </div>
                             </div>
                             <div class="price_text">
-                                <p>One User</p>
-                                <p>Android App</p>
-                                <p>Unlimited Support</p>
-                                <p>Battery Backup 40%</p>
+                                <p>Free</p>
+                                <p>Consultancy Service</p>
+                                <p>From Our</p>
+                                <p> 100+ Experties</p>
 
                             </div>
                         </div>
@@ -411,15 +412,16 @@
                         <div class="plan-table">
                             <div class="plan">
                                 <div class="plan-month">
-                                    <h4><span>10</span>.00</h4>
-                                    <p>Per Month</p>
+                                    <h4><span>3000+</span></h4>
+                                    <p>Bdt.</p>
+                                    
                                 </div>
                             </div>
                             <div class="price_text">
-                                <p>One User</p>
-                                <p>Android App</p>
-                                <p>Unlimited Support</p>
-                                <p>Battery Backup 40%</p>
+                                <p>Short Tender</p>
+                                <p>Less Amount</p>
+                                <p>Less Quantity</p>
+                                <p>From Basic Sellers</p>
 
                             </div>
                         </div>
@@ -436,7 +438,7 @@
                             <div class="plan">
                                 <div class="plan-month">
                                     <h4><span>20</span>.00</h4>
-                                    <p>Per Month</p>
+                                    <p>Bdt.</p>
                                 </div>
                             </div>
                             <div class="price_text">
