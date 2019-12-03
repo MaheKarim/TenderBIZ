@@ -20,8 +20,8 @@
 							<a  href="{{ url('/home')}}" class="collapsed" aria-expanded="false">
 									<i class="fas fa-home"></i>
 									<p>Dashboard</p>	
-							</a>
-							</li>
+						    </a>
+						</li>
 					
 						<li class="nav-section">
 							<span class="sidebar-mini-icon">
@@ -39,6 +39,12 @@
 							<a href="{{ route('showTender') }}">
 								<i class="fas fas fa-atom"></i>
 								<p>Service Tender</p>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="{{ route('showTeam') }}">
+								<i class="fas fas fa-atom"></i>
+								<p>Team Mate</p>
 							</a>
 						</li>
 					</ul>

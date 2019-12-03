@@ -702,7 +702,7 @@
                     </div>
                 </div>
             </div>
-
+            <form action="" method="POST">
             <div class="row">
                 <div class="col-md-4">
                     <input type="text" name="name" id="form_txt" placeholder="Name">
@@ -721,7 +721,7 @@
             </div>
 
             <div class="text-center mt-4">
-                <button class="touch_btn">send</button>
+                <button type="button" class="touch_btn">send</button>
             </div>
 
 
