@@ -20,15 +20,7 @@
             <li class="separator">
                 <i class="flaticon-right-arrow"></i>
             </li>
-            <li class="nav-item">
-                <a href="#">Forms</a>
-            </li>
-            <li class="separator">
-                <i class="flaticon-right-arrow"></i>
-            </li>
-            <li class="nav-item">
-                <a href="#">Basic Form</a>
-            </li>
+            
         </ul>
     </div>
     <div class="row">
