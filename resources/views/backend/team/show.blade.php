@@ -41,20 +41,21 @@
                                 </tr>
                             </thead>
                             <tbody>
-                               {{-- @foreach ($categories as $category)  --}}
+                               @foreach ($teaminfos as $teaminfo) 
                                 <tr>
-                                <td>#</td>
-                                <td>#</td>
-                                <td>#</td>
+                                <td>{{ $teaminfo->teammember_name }}</td>
+                                <td>{{ $teaminfo->teammember_designation }}</td>
+                                <td>
+                                    <img style="width:100%; max-width:100px" src="{{ asset('storage') }}/{{ $teaminfo->teammember_image }}" />                            
+                                </td>
                               
                                     <td>
                                         <div class="form-button-action">
-                                             <a href="#" type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
+                                             <a href="{{ route('deleteTeam', $teaminfo->id) }}" type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
                                                 <i class="fa fa-times"></i>
                                             </a> 
                                         </div>
                                     </td>
-                               
                                 </tr>
                                  @endforeach
                             </tbody>
