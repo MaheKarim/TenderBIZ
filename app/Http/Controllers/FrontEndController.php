@@ -12,7 +12,14 @@ class FrontEndController extends Controller
 
         $data =[' '];
         $data['teaminfos'] = Team::all();
+        // $data['categories'] = Category::all();
+        return view('frontend.master', $data);
+    }
+
+    function ager(){
+        $data =[' '];
+        $data['teaminfos'] = Team::all();
         $data['categories'] = Category::all();
-        return view('frontend.welcome', $data);
+        return view('frontend.extra', $data);
     }
 }

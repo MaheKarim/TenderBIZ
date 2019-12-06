@@ -2,9 +2,10 @@
 
 
 
-Route::get('/', function () {
-    return view('frontend.welcome');
-});
+
+
+Route::get('/', 'FrontEndController@index');
+
 
 Auth::routes();
 
