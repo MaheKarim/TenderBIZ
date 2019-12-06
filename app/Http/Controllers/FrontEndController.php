@@ -18,10 +18,17 @@ class FrontEndController extends Controller
         return view('frontend.master', $data);
     }
 
-    function ager(){
-        $data =[' '];
-        $data['teaminfos'] = Team::all();
-        $data['categories'] = Category::all();
-        return view('frontend.extra', $data);
+    
+
+    public function SingleTender($id){
+        $data = [' '];
+        $data['servicedetails']   = Service::where('id', $id)->first();
+
+        return view('frontend.single_tender', $data);
+
+    }
+
+    function test(){
+        return view('frontend.test');
     }
 }

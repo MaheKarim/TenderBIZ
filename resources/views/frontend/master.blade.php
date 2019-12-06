@@ -2,7 +2,7 @@
 @section('content')
     
         <!-- Start Header Area -->
-        @include('frontend.inc.nav')
+      
         <!-- End Header Area -->
 
         

@@ -19,10 +19,10 @@
                     </div>
 
                     <div class="post-content">
-                        <h3><a href="#">{{ $service->service_tender_name }}</a></h3>
+                        <h3><a href="{{ route('SingleTender' , $service->id) }}">{{ $service->service_tender_name }}</a></h3>
                         <p>{!! str_limit($service->service_tender_description , 50) !!}</p>
 
-                        <a href="#" class="default-btn">Bid Now<span></span></a>
+                        <a href="{{ route('SingleTender',$service->id) }}" class="default-btn">Bid Now<span></span></a>
                     </div>
                 </div>
             </div>

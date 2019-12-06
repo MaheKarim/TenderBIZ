@@ -40,3 +40,7 @@ Route::get('/show/team_mate','TeamController@index')->name('showTeam');
 Route::get('/add/team_mate','TeamController@add')->name('addTeam');
 Route::post('store-team','TeamController@store')->name('storeTeam');
 Route::get('/delete/team/{id}','TeamController@delete')->name('deleteTeam');
+
+
+Route::get('/tender/{id}','FrontEndController@SingleTender')->name('SingleTender');
+Route::get('/test','FrontEndController@test');
