@@ -43,8 +43,14 @@
 						</li>
 						<li class="nav-item">
 							<a href="{{ route('showTeam') }}">
-								<i class="fas fas fa-atom"></i>
+								<i class="fas fas fa-bullseye"></i>
 								<p>Team Mate</p>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="{{ route('showReview') }}">
+								<i class="fas fas fa-certificate"></i>
+								<p>Review</p>
 							</a>
 						</li>
 					</ul>

@@ -44,3 +44,5 @@ Route::get('/delete/team/{id}','TeamController@delete')->name('deleteTeam');
 
 Route::get('/tender/{id}','FrontEndController@SingleTender')->name('SingleTender');
 Route::get('/test','FrontEndController@test');
+
+Route::get('/review/show','ReviewController@show')->name('showReview');

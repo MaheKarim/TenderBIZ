@@ -4,8 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class tendersubmit extends Model
+class Review extends Model
 {
-    // 
+    //
     protected $guarded = [ ];
 }
