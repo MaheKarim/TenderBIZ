@@ -49,3 +49,6 @@ Route::get('/show/review','ReviewController@show')->name('showReview');
 Route::get('add/review','ReviewController@add')->name('addReview');
 Route::post('store-review','ReviewController@store')->name('storereview');
 Route::get('/delete/review/{id}','ReviewController@delete')->name('deletereview');
+
+
+Route::post('storeBidInfo','BidInfoController@store')->name('bidinfo');

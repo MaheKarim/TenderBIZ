@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Category;
-use App\tendersubmit;
+use App\BidInfo;
 
 class Service extends Model
 {
@@ -14,8 +14,8 @@ class Service extends Model
         return $this->belongsTo('App\Category','category_name_id', 'id');
     }
 
-    public function Services(){
-        return $this->hasMany('App\tendersubmit');
+    public function BidInfos(){
+        return $this->hasMany('App\BidInfo');
     }
-    
+
 }

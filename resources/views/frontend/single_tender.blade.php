@@ -3,12 +3,15 @@
 @section('content')
       <!-- Start Events Details Area -->
       <section class="events-details-area ptb-100">
+
+
+
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12">
                     <div class="events-details-header">
-                        <a href="#" class="back-all-events"><i class="flaticon-left-chevron"></i> Back To All Events</a>
-                        <h3>2020 Life Insurance Conference</h3>
+                        <a href="#" class="back-all-events"><i class="flaticon-left-chevron"></i> </a>
+                        <h3>{{ $servicedetails->service_tender_name }}</h3>
                         <ul class="events-info-meta">
                             <li><i class="flaticon-timetable"></i> 10 November, 2020</li>
                             <li><i class="far fa-clock"></i> 10.00AM - 10.00PM</li>
@@ -44,41 +47,26 @@
                         </div>
 
                         <div class="pearo-post-navigation">
-                            <div class="prev-link-wrapper">
-                                <div class="info-prev-link-wrapper">
-                                    <a href="#">
-                                        <span class="image-prev">
-                                            <img src="assets/img/services-image/1.jpg" alt="image">
-                                            <span class="post-nav-title">Prev</span>
-                                        </span>
-    
-                                        <span class="prev-link-info-wrapper">
-                                            <span class="prev-title">Health Insurance</span>
-                                            <span class="meta-wrapper">
-                                                <span class="date-post">January 21, 2020</span>
-                                            </span>
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-    
-                            <div class="next-link-wrapper">
-                                <div class="info-next-link-wrapper">
-                                    <a href="#">
-                                        <span class="next-link-info-wrapper">
-                                            <span class="next-title">Life Insurance</span>
-                                            <span class="meta-wrapper">
-                                                <span class="date-post">January 21, 2020</span>
-                                            </span>
-                                        </span>
-    
-                                        <span class="image-next">
-                                            <img src="assets/img/services-image/3.jpg" alt="image">
-                                            <span class="post-nav-title">Next</span>
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
+
+
+
+                            <form action="{{ route('bidinfo') }}" method="POST">
+                                @csrf
+                                    <div class="form-group">
+                                      <label for="exampleInputEmail1">Input Your Bid Amount</label>
+                                      <input type="text" name="bidamount" class="form-control" id="exampleInputEmail1"  placeholder="Input Your Bid Amount">
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="exampleInputPassword1">Write Something</label>
+                                      <input type="textarea" name="biddes" class="form-control"  placeholder="Bidding Description">
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+
+
+
+
                         </div>
                     </div>
                 </div>
@@ -115,8 +103,13 @@
                         </section>
                     </aside>
                 </div>
+
+
+
+
             </div>
         </div>
+
     </section>
     <!-- End Events Details Area -->
 @endsection

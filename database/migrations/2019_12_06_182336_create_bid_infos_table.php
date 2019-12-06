@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTendersubmitsTable extends Migration
+class CreateBidInfosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class CreateTendersubmitsTable extends Migration
      */
     public function up()
     {
-        Schema::create('tendersubmits', function (Blueprint $table) {
+        Schema::create('bid_infos', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('service_id');  // tender
-            $table->string('buyer_id');
-            $table->string('seller_id');
+            $table->bigInteger('service_id');
+            $table->bigInteger('bidder_id');
+            $table->integer('bidamount');
+            $table->longText('biddes');
             $table->timestamps();
         });
     }
@@ -29,6 +30,6 @@ class CreateTendersubmitsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tendersubmits');
+        Schema::dropIfExists('bid_infos');
     }
 }
