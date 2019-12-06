@@ -24,6 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+        
         return view('backend.master');
     }
 
@@ -32,7 +33,7 @@ class HomeController extends Controller
         return view('auth.changepassword');
     }
 
-    
+
     public function changePassword(Request $request){
         if (!(Hash::check($request->get('current-password'), Auth::user()->password))) {
             // The passwords matches

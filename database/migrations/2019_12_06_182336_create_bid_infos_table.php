@@ -19,6 +19,7 @@ class CreateBidInfosTable extends Migration
             $table->bigInteger('bidder_id');
             $table->integer('bidamount');
             $table->longText('biddes');
+            $table->integer('status')->default(0);
             $table->timestamps();
         });
     }

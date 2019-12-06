@@ -69,8 +69,107 @@
                         </div>
                     </div>
                 </div>
-            
+
             </div>
+
+
+
+            {{--  For Service Publisher  --}}
+            @if(Auth::user()->user_role_id == 1)
+            <h2>Section for Admin</h2>
+            @forelse(Auth::user()->myServices as $service)
+
+            {{ $service->service_tender_name }}<br>
+
+
+            <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Price</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Bidder Name</th>
+                        <th scope="col">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    @forelse($service->myBids as $bid)
+                      <tr>
+                        <th scope="row">{{ $bid->bidamount }}</th>
+                        <td>{{ $bid->biddes }}</td>
+                        <td>{{ $bid->bidder->name }}</td>
+                        <td>
+                            @if($bid->status == 0)
+
+                                <!-- Example single danger button -->
+                                <div class="btn-group">
+                                  <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Action
+                                  </button>
+                                  <div class="dropdown-menu">
+                                <form action="{{ route('bidApproved', $bid->id) }}" method="POST">
+                                    @csrf
+                                    <button type="submit" class="dropdown-item" value="approve" name="mode">Approve</button>
+                                </form>
+                                <form action="{{ route('bidApproved', $bid->id) }}" method="POST">
+                                    @csrf
+                                    <button type="submit" class="dropdown-item" value="reject" name="mode">Reject</button>
+                                </form>
+                                  </div>
+                                </div>
+
+                            @elseif($bid->status == 2)
+                            <button type="button" class="btn btn-danger">Rejected</button>
+                            @else
+                                <button type="button" class="btn btn-success">Approved</button>
+                            @endif
+                        </td>
+                      </tr>
+                    @empty
+                        No bids availabe!
+                    @endforelse
+                    </tbody>
+                  </table>
+            @empty
+                No services availabe!
+            @endforelse
+
+            @endif
+            @if(Auth::user()->user_role_id == 2)
+            <h2>Section Buyer</h2>
+            <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Price</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Bidder Name</th>
+                        <th scope="col">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    @forelse(Auth::user()->myBids as $bid)
+                      <tr>
+                        <th scope="row">{{ $bid->bidamount }}</th>
+                        <td>{{ $bid->biddes }}</td>
+                        <td>{{ $bid->bidder->name }}</td>
+                        <td>
+                            @if($bid->status == 0)
+
+                            <button type="button" class="btn btn-warning">Pending</button>
+
+                            @elseif($bid->status == 2)
+                            <button type="button" class="btn btn-danger">Rejected</button>
+                            @else
+                                <button type="button" class="btn btn-success">Approved</button>
+                            @endif
+                        </td>
+                      </tr>
+                    @empty
+                        No bids availabe!
+                    @endforelse
+                    </tbody>
+                  </table>
+
+                  @endif
         </div>
-    </div> 
+    </div>
 @endsection

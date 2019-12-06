@@ -40,7 +40,59 @@ return [
     */
 
     'debug' => env('APP_DEBUG', false),
-
+    // .env informations is disabled
+    'debug_blacklist' => [
+        '_ENV' => [
+            'APP_KEY',
+            'DB_PORT',
+            'DB_DATABASE',
+            'DB_USERNAME',
+            'DB_PASSWORD',
+            'MAIL_DRIVER',
+            'MAIL_HOST',
+            'MAIL_PORT',
+            'MAIL_USERNAME',
+            'MAIL_PASSWORD',
+            'MAIL_ENCRYPTION',
+            'REDIS_PASSWORD',
+            'MAIL_PASSWORD',
+            'PUSHER_APP_KEY',
+            'PUSHER_APP_SECRET',
+            'PHPRC',
+            'SESSION_LIFETIME',
+            'REDIS_PORT',
+        ],
+        '_SERVER' => [
+            'SERVER_ADDR',
+            'PHPRC',
+            'DOCUMENT_ROOT',
+            'CONTEXT_DOCUMENT_ROOT',
+            'SCRIPT_FILENAME',
+            'REMOTE_PORT',
+            'SERVER_SOFTWARE',
+            'DB_CONNECTION',
+            'DB_PORT',
+            'DB_DATABASE',
+            'DB_USERNAME',
+            'DB_PASSWORD',
+            'MAIL_DRIVER',
+            'MAIL_HOST',
+            'MAIL_PORT',
+            'MAIL_USERNAME',
+            'MAIL_PASSWORD',
+            'MAIL_ENCRYPTION',
+        ],
+        '_POST' => [
+            'password',
+        ],
+        '_COOKIE' => [
+            'cpsession',
+            'timezone',
+            'XSRF-TOKEN',
+            'cpsession',
+            'cpsession',
+        ],
+    ],
     /*
     |--------------------------------------------------------------------------
     | Application URL

@@ -42,4 +42,12 @@ class User extends Authenticatable
     public function user_role(){
         return $this->belongsTo('App\User_role');
     }
+    public function mybids(){
+        return $this->hasMany('App\BidInfo', 'bidder_id');
+    }
+    public function myServices(){
+        return $this->hasMany('App\Service');
+    }
+
+
 }

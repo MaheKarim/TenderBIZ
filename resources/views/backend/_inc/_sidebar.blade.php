@@ -1,4 +1,4 @@
-<div class="sidebar sidebar-style-2">			
+<div class="sidebar sidebar-style-2">
 			<div class="sidebar-wrapper scrollbar scrollbar-inner">
 				<div class="sidebar-content">
 					<div class="user">
@@ -8,8 +8,8 @@
 						<div class="info">
 							<a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
 								<span>
-									Admin
-									<span class="user-level">Administrator</span>
+									{{ Auth::user()->name }}
+									<span class="user-level">{{ Auth::user()->user_role->user_role }}</span>
 								</span>
 							</a>
 							<div class="clearfix"></div>
@@ -19,10 +19,10 @@
 						<li class="nav-item active">
 							<a  href="{{ url('/home')}}" class="collapsed" aria-expanded="false">
 									<i class="fas fa-home"></i>
-									<p>Dashboard</p>	
+									<p>Dashboard</p>
 						    </a>
 						</li>
-					
+
 						<li class="nav-section">
 							<span class="sidebar-mini-icon">
 								<i class="fa fa-ellipsis-h"></i>

@@ -38,13 +38,15 @@
                                 @enderror
                             </div>
                         </div>
-                        
+
                         <div class="form-group row">
                             <label for="user_role_id" class="col-md-4 col-form-label text-md-right">{{ __('Select A Role') }}</label>
                             <div class="col-md-6">
                                 <select class="form-control" name="user_role_id">
                                     <option disabled selected>Select a role</option>
-                                    @php( $userrole = \App\user_role::all())
+
+                                    @php( $userrole = \App\user_role::where('id', '!=', 1)->get())
+
                                     @foreach($userrole as $user_role)
                                         <option value="{{ $user_role->id }}">{{ $user_role->user_role }}</option>
                                     @endforeach
@@ -56,7 +58,7 @@
                                 @enderror
                             </div>
                         </div>
-                        
+
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 

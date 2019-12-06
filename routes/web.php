@@ -52,3 +52,4 @@ Route::get('/delete/review/{id}','ReviewController@delete')->name('deletereview'
 
 
 Route::post('storeBidInfo','BidInfoController@store')->name('bidinfo');
+Route::post('tender-approve/{bidId}','BidInfoController@approve')->name('bidApproved');

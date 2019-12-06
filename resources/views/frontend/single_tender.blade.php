@@ -48,21 +48,34 @@
 
                         <div class="pearo-post-navigation">
 
-
+                        @if(!App\BidInfo::where('bidder_id', Auth::id())->exists())
 
                             <form action="{{ route('bidinfo') }}" method="POST">
                                 @csrf
                                     <div class="form-group">
                                       <label for="exampleInputEmail1">Input Your Bid Amount</label>
-                                      <input type="text" name="bidamount" class="form-control" id="exampleInputEmail1"  placeholder="Input Your Bid Amount">
+                                      <input type="text" name="bidamount" class="form-control" placeholder="Input Your Bid Amount">
                                     </div>
                                     <div class="form-group">
                                       <label for="exampleInputPassword1">Write Something</label>
                                       <input type="textarea" name="biddes" class="form-control"  placeholder="Bidding Description">
                                     </div>
 
-                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                    <button type="submit" class="btn btn-primary" name="service_id" value="{{ $servicedetails->id }}">Submit</button>
                             </form>
+
+
+                        @endif
+
+
+                            <div>
+                                @forelse($servicedetails->myBids->where('status', 1) as $bid)
+                                {{ $bid->bidamount }} <br>
+                                {{ $bid->biddes }}
+                                @empty
+                                    No bids availabe!
+                                @endforelse
+                            </div>
 
 
 

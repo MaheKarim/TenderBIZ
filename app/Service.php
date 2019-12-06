@@ -14,7 +14,7 @@ class Service extends Model
         return $this->belongsTo('App\Category','category_name_id', 'id');
     }
 
-    public function BidInfos(){
+    public function myBids(){
         return $this->hasMany('App\BidInfo');
     }
 
