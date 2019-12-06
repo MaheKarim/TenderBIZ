@@ -45,4 +45,7 @@ Route::get('/delete/team/{id}','TeamController@delete')->name('deleteTeam');
 Route::get('/tender/{id}','FrontEndController@SingleTender')->name('SingleTender');
 Route::get('/test','FrontEndController@test');
 
-Route::get('/review/show','ReviewController@show')->name('showReview');
+Route::get('/show/review','ReviewController@show')->name('showReview');
+Route::get('add/review','ReviewController@add')->name('addReview');
+Route::post('store-review','ReviewController@store')->name('storereview');
+Route::get('/delete/review/{id}','ReviewController@delete')->name('deletereview');

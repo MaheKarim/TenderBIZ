@@ -7,53 +7,27 @@
         </div>
 
         <div class="feedback-item-slides owl-carousel owl-theme">
+
+            @php( $reviews = \App\Review::all())
+                
+            
+            @foreach ($reviews as $review)
+            
             <div class="single-feedback-item">
                 <div class="feedback-desc">
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit volupt accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae illo.</p>
+                    <p>{{ $review->reviewer_review }}.</p>
                 </div>
 
                 <div class="client-info">
-                    <img src="assets/img/client-image/1.jpg" alt="image">
-                    <h3>David Luis</h3>
-                    <span>Founder & CEO</span>
+                    <img src="{{ asset('storage') }}/{{ $review->reviewer_image }}" alt="image">
+                    <h3>{{ $review->reviewer_name }}</h3>
+                    <span>{{ $review->reviewer_designation }}</span>
                 </div>
             </div>
 
-            <div class="single-feedback-item">
-                <div class="feedback-desc">
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit volupt accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae illo.</p>
-                </div>
+            @endforeach
 
-                <div class="client-info">
-                    <img src="assets/img/client-image/2.jpg" alt="image">
-                    <h3>Steven Smith</h3>
-                    <span>Developer</span>
-                </div>
-            </div>
-
-            <div class="single-feedback-item">
-                <div class="feedback-desc">
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit volupt accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae illo.</p>
-                </div>
-
-                <div class="client-info">
-                    <img src="assets/img/client-image/3.jpg" alt="image">
-                    <h3>Sarah Lucy</h3>
-                    <span>Designer</span>
-                </div>
-            </div>
-
-            <div class="single-feedback-item">
-                <div class="feedback-desc">
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit volupt accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae illo.</p>
-                </div>
-
-                <div class="client-info">
-                    <img src="assets/img/client-image/4.jpg" alt="image">
-                    <h3>James Anderson</h3>
-                    <span>Manager</span>
-                </div>
-            </div>
+            
         </div>
     </div>
 </section>

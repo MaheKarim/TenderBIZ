@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Team;
 use App\Category;
 use App\Service;
+use App\Review;
 class FrontEndController extends Controller
 {
     //
@@ -14,6 +15,7 @@ class FrontEndController extends Controller
         $data =[' '];
         $data['teaminfos'] = Team::all();
         $data['services'] = Service::paginate(12);
+        $data['reviews '] = Review::all();
      
         return view('frontend.master', $data);
     }
