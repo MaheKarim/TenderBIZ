@@ -17,7 +17,8 @@ class ServiceController extends Controller
     public function show(){
 
         $data = [' '];
-        $data['services'] = Service::all();
+
+        $data['services'] = Service::where('user_id', Auth::id())->get();
 
         return view ('backend.service.show', $data);
     }
