@@ -25,7 +25,7 @@
                             <div class="pearo-responsive-menu">
                                 <div class="logo">
                                     <a href="index-2.html">
-                                        <img src="assets/img/white-logo.png" alt="logo">
+                                        <img src="assets/img/logo.png" alt="logo">
                                     </a>
                                 </div>
                             </div>
@@ -36,21 +36,13 @@
                         <div class="container">
                             <nav class="navbar navbar-expand-md navbar-light">
                                 <a class="navbar-brand" href="index-2.html">
-                                    <img src="assets/img/white-logo.png" alt="logo">
+                                    <img src="assets/img/logo.png" alt="logo">
                                 </a>
             
                                 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                                     <ul class="navbar-nav">
-                                        <li class="nav-item"><a href="#" class="nav-link active">Home <i class="flaticon-down-arrow"></i></a>
-                                            <ul class="dropdown-menu">
-                                                <li class="nav-item"><a href="index.html" class="nav-link">Home One</a></li>
-            
-                                                <li class="nav-item"><a href="index-2.html" class="nav-link active">Home Two</a></li>
-            
-                                                <li class="nav-item"><a href="index-3.html" class="nav-link">Home Three</a></li>
-            
-                                                <li class="nav-item"><a href="index-4.html" class="nav-link">Home Four</a></li>
-                                            </ul>
+                                        <li class="nav-item"><a href="{{ url('/login') }}" class="nav-link active">Home <i class="flaticon-down-arrow"></i></a>
+                                            
                                         </li>
             
                                         <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
@@ -61,19 +53,6 @@
                                         <li class="nav-item"><a href="#" class="nav-link">Pages <i class="flaticon-down-arrow"></i></a>
                                             <ul class="dropdown-menu">
                                                 <li class="nav-item"><a href="team.html" class="nav-link">Team</a></li>
-            
-            
-                                               
-            
-                                                <li class="nav-item"><a href="#" class="nav-link">Events</a>
-                                                    <ul class="dropdown-menu">
-                                                        <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
-            
-                                                        <li class="nav-item"><a href="single-events.html" class="nav-link">Events Details</a></li>
-                                                    </ul>
-                                                </li>
-            
-                                               
                                             </ul>
                                         </li>
             

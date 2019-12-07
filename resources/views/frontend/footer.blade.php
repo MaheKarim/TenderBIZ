@@ -26,7 +26,7 @@
             <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="single-footer-widget">
                     <div class="logo">
-                        <a href="#"><img src="assets/img/white-logo.png" alt="image"></a>
+                        <a href="#"><img src="assets/img/logo.png" alt="image"></a>
 
                         <p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra lacus vel facilisis.</p>
                     </div>
@@ -48,12 +48,11 @@
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Our Team</a></li>
                         <li><a href="#">About Us</a></li>
-                        <li><a href="#">Latest News</a></li>
-                        <li><a href="#">Insurance</a></li>
+                        
                         <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Our Events</a></li>
+
                         <li><a href="#">Terms & Conditions</a></li>
-                        <li><a href="#">Our Packages</a></li>
+                        
                         <li><a href="#">Contact Us</a></li>
                     </ul>
                 </div>
@@ -77,7 +76,7 @@
         <div class="copyright-area">
             <div class="row align-items-center">
                 <div class="col-lg-6 col-sm-6 col-md-6">
-                    <p><i class="far fa-copyright"></i> 2019 TenderBIZ. All Rights Reserved by <a href="https://envytheme.com/" target="_blank">EnvyTheme</a></p>
+                    <p><i class="far fa-copyright"></i> 2019 TenderBIZ. All Rights Reserved by <a href="https://envytheme.com/" target="_blank">TenderBIZ</a></p>
                 </div>
 
                 <div class="col-lg-6 col-sm-6 col-md-6">

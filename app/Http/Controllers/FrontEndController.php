@@ -31,7 +31,7 @@ class FrontEndController extends Controller
         $servicedetails   = Service::where('id', $id)->firstOrFail();
 
          return view('frontend.single_tender', compact(
-             'servicedetails',
+             'servicedetails'
              
             ));
 

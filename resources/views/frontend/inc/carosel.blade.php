@@ -9,8 +9,8 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
 
                         <div class="btn-box">
-                            <a href="#" class="default-btn">Get A Quote <span></span></a>
-                            <a href="#" class="optional-btn">Contact Us <span></span></a>
+                            <a href="{{ url('/login') }}" class="default-btn">Login <span></span></a>
+                            <a href="{{ route('register') }}" class="optional-btn">Register <span></span></a>
                         </div>
                     </div>
                 </div>
@@ -28,8 +28,8 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
 
                         <div class="btn-box">
-                            <a href="#" class="default-btn">Get A Quote <span></span></a>
-                            <a href="#" class="optional-btn">Contact Us <span></span></a>
+                            <a href="{{ url('/login') }}" class="default-btn">Login <span></span></a>
+                            <a href="{{ route('register') }}" class="optional-btn">Register <span></span></a>
                         </div>
                     </div>
                 </div>
@@ -47,8 +47,8 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
 
                         <div class="btn-box">
-                            <a href="#" class="default-btn">Get A Quote <span></span></a>
-                            <a href="#" class="optional-btn">Contact Us <span></span></a>
+                            <a href="{{ url('/login') }}" class="default-btn">Login <span></span></a>
+                            <a href="{{ route('register') }}" class="optional-btn">Register <span></span></a>
                         </div>
                     </div>
                 </div>
