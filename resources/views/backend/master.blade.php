@@ -75,7 +75,7 @@
 
 
             {{--  For Service Publisher  --}}
-            @if(Auth::user()->user_role_id == 1)
+            @if(Auth::user()->user_role_id == 2)
             <h2>Section for Admin</h2>
             @forelse(Auth::user()->myServices as $service)
 
@@ -134,7 +134,7 @@
             @endforelse
 
             @endif
-            @if(Auth::user()->user_role_id == 2)
+            @if(Auth::user()->user_role_id == 3)
             <h2>Section Buyer</h2>
             <table class="table">
                     <thead>
