@@ -41,7 +41,7 @@
             
                                 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                                     <ul class="navbar-nav">
-                                        <li class="nav-item"><a href="{{ url('/login') }}" class="nav-link active">Home <i class="flaticon-down-arrow"></i></a>
+                                        <li class="nav-item"><a href="{{ url('/login') }}" class="nav-link">Home </a>
                                             
                                         </li>
             
@@ -50,9 +50,10 @@
                                         
                                         </li>
             
-                                        <li class="nav-item"><a href="#" class="nav-link">Pages <i class="flaticon-down-arrow"></i></a>
+                                        <li class="nav-item"><a href="#" class="nav-link">Authentication <i class="flaticon-down-arrow"></i></a>
                                             <ul class="dropdown-menu">
-                                                <li class="nav-item"><a href="team.html" class="nav-link">Team</a></li>
+                                                <li class="nav-item"><a href="{{ url('/login') }}" class="nav-link">Login</a></li>
+                                                <li class="nav-item"><a href="{{ url('/registration') }}" class="nav-link">Registration</a></li>
                                             </ul>
                                         </li>
             
